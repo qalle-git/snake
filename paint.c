@@ -95,7 +95,7 @@ void add_circle(int I[NROWS][NCOLS], symbols_t symbol, int col0, int row0, doubl
 		{
 			double distance = sqrt(pow(row - row0, 2.0) + pow(col - col0, 2.0));
 
-			if (ceil(distance) < r)
+			if (distance <= r)
 			{
 				add_point(I, symbol, col, row);
 			}
