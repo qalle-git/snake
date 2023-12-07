@@ -136,6 +136,8 @@ void apple_new(apple_t *apple, snake_t *snake)
 
 	while (!found)
 	{
+		found = true;
+		
 		random_position.x = rand() % (X_SIZE - 2) + 1;
 		random_position.y = rand() % (Y_SIZE - 2) + 1;
 
@@ -145,12 +147,10 @@ void apple_new(apple_t *apple, snake_t *snake)
 
 			if (random_position.x == tail_position.x && random_position.y == tail_position.y)
 			{
+				found = false;
+				
 				break;
 			}
-
-			found = true;
-
-			break;
 		}
 	}
 
